@@ -19,7 +19,10 @@
 + (QMChatCellLayoutModel)layoutModel {
     
     QMChatCellLayoutModel defaultLayoutModel = [super layoutModel];
+    defaultLayoutModel.avatarSize = CGSizeMake(0, 0);
     defaultLayoutModel.containerInsets = UIEdgeInsetsMake(4, 15, 4, 4);
+    defaultLayoutModel.topLabelHeight = 0;
+    defaultLayoutModel.bottomLabelHeight = 22;
     
     return defaultLayoutModel;
 }
