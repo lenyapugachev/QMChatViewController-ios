@@ -349,8 +349,8 @@ UIAlertViewDelegate,QMPlaceHolderTextViewPasteDelegate, QMChatDataSourceDelegate
     
     UIButton *sendButton = [[UIButton alloc] initWithFrame:CGRectZero];
     [sendButton setTitle:sendTitle forState:UIControlStateNormal];
-    [sendButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [sendButton setTitleColor:[[UIColor blueColor] colorByDarkeningColorWithValue:0.1f] forState:UIControlStateHighlighted];
+    [sendButton setTitleColor:[[UIColor alloc] initWithRed:0/255.f green:118/255.f blue:255/255.f alpha:1] forState:UIControlStateNormal];
+    [sendButton setTitleColor:[[[UIColor alloc] initWithRed:0/255.f green:118/255.f blue:255/255.f alpha:1] colorByDarkeningColorWithValue:0.1f] forState:UIControlStateHighlighted];
     [sendButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
     
     sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
@@ -358,7 +358,7 @@ UIAlertViewDelegate,QMPlaceHolderTextViewPasteDelegate, QMChatDataSourceDelegate
     sendButton.titleLabel.minimumScaleFactor = 0.85f;
     sendButton.contentMode = UIViewContentModeCenter;
     sendButton.backgroundColor = [UIColor clearColor];
-    sendButton.tintColor = [UIColor blueColor];
+    sendButton.tintColor = [[UIColor alloc] initWithRed:0/255.f green:118/255.f blue:255/255.f alpha:1];
     
     CGFloat maxHeight = 32.0f;
     
